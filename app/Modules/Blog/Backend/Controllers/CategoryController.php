@@ -3,10 +3,8 @@
 namespace App\Modules\Blog\Backend\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Modules\Blog\Backend\Models\Blog;
-use App\Modules\Blog\Backend\Models\BlogCategory;
-use App\Modules\Blog\Backend\Models\BlogGallery;
-use Illuminate\Http\Request;
+ use App\Modules\Blog\Backend\Models\BlogCategory;
+ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Throwable;
 
@@ -14,7 +12,7 @@ class CategoryController extends Controller
 {
     public function index() {
         $categories = BlogCategory::all();
-        return view('admin.pages.blogs.categories', compact('categories'));
+        return view('Blogs-Backend::categories', compact('categories'));
     }
 
     function store(Request $request) {

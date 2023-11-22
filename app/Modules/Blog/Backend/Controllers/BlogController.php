@@ -8,15 +8,15 @@ use App\Modules\Blog\Backend\Models\BlogCategory;
 use App\Modules\Blog\Backend\Models\BlogGallery;
 use Illuminate\Http\Request;
 use Throwable;
-use Yajra\DataTables\Facades\DataTables;
-
+ 
 class BlogController extends Controller
 {
 
     public function index()
     {
+     
         $blogs = Blog::with('categoryR')->get();
-        return view('admin.pages.blogs.index', compact('blogs'));
+        return view('Blog-Backend::index', compact('blogs'));
     }
 
     public function delete($id)
@@ -26,7 +26,7 @@ class BlogController extends Controller
         session()->flash('status', 'success');
         session()->flash('title', 'Başarıyla silindi!');
         session()->flash('message', $user->id . ' numaralı Birim silindi!');
-        return redirect()->route('blogs.index');
+        return redirect()->route('admin.blogs.index');
     }
 
     function store(Request $request)
@@ -52,7 +52,7 @@ class BlogController extends Controller
                 ]);
             }
         }
-        return redirect()->route('blogs.edit', $blog->id);
+        return redirect()->route('admin.blogs.edit', $blog->id);
     }
 
     public function update(Request $request, Blog $blog)
@@ -83,7 +83,7 @@ class BlogController extends Controller
         } catch (Throwable $e) {
             $status = 'danger';
             $message = 'Bir sorun oluştu. Lütfen daha sonra tekrar deneyin..';
-            return redirect()->route('blogs.edit', $blog->id)->with(['status' => $status, 'message' => $message]);
+            return redirect()->route('admin.blogs.edit', $blog->id)->with(['status' => $status, 'message' => $message]);
         }
     }
 
@@ -101,13 +101,16 @@ class BlogController extends Controller
     {
         $blogGallery = Blog::with('gallery')->where('id', $blog->id)->first();
         $blogCategory = BlogCategory::all();
-        return view('admin.pages.blogs.edit', (['blog' => $blog, 'gallery' => $blogGallery, 'categories' => $blogCategory]));
+        return view('Blog-Backend::edit', (['blog' => $blog, 'gallery' => $blogGallery, 'categories' => $blogCategory]));
     }
-
+    public function show(Blog $blog)
+    {
+        //
+    }
     public function create()
     {
         $categories = BlogCategory::all();
-        return view('admin.pages.blogs.create', compact('categories'));
+        return view('Blog-Backend::create', compact('categories'));
     }
 
     public function destroy($id)
@@ -121,7 +124,7 @@ class BlogController extends Controller
         } catch (Throwable $e) {
             $status = 'danger';
             $message = 'Bir sorun oluştu. Lütfen daha sonra tekrar deneyin..';
-            return redirect()->route('blogs.index')->with(['status' => $status, 'message' => $message]);
+            return redirect()->route('admin.blogs.index')->with(['status' => $status, 'message' => $message]);
         }
     }
 }

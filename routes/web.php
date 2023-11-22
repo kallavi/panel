@@ -51,41 +51,41 @@ Route::prefix(env('ADMIN_PREFIX'))->middleware(\App\Http\Middleware\BackofficeMi
 
         Route::post('/slug-generate', [SlugController::class, 'generate'])->name('slug.generate');
 
-        Route::get('blog/delete/{id}', [App\Modules\Blog\Backend\Controllers\BlogController::class, 'delete'])->name('admin.blog.delete');
+        // Route::get('blog/delete/{id}', [App\Modules\Blog\Backend\Controllers\BlogController::class, 'delete'])->name('admin.blog.delete');
 
         /* Blog */
-        Route::resource(
-            'blogs',
-            \App\Modules\Blog\Backend\Controllers\BlogController::class,
-            [
-                'names' => [
-                    'edit' => 'blogs.edit',
-                    'index' => 'blogs.index',
-                    'create' => 'blogs.create',
-                    'store' => 'blogs.store',
-                    'destroy' => 'blogs.destroy',
-                    'update' => 'blogs.update'
-                ],
-            ]
-        );
+        // Route::resource(
+        //     'blogs',
+        //     \App\Modules\Blog\Backend\Controllers\BlogController::class,
+        //     [
+        //         'names' => [
+        //             'edit' => 'blogs.edit',
+        //             'index' => 'blogs.index',
+        //             'create' => 'blogs.create',
+        //             'store' => 'blogs.store',
+        //             'destroy' => 'blogs.destroy',
+        //             'update' => 'blogs.update'
+        //         ],
+        //     ]
+        // );
 
-        Route::get('blog/delete/{id}', [App\Modules\Blog\Backend\Controllers\BlogController::class, 'delete'])->name('admin.blog.delete');
+        // Route::get('blog/delete/{id}', [App\Modules\Blog\Backend\Controllers\BlogController::class, 'delete'])->name('admin.blog.delete');
 
-        /* Blog Categories */
-        Route::resource(
-            'blogcategories',
-            \App\Modules\Blog\Backend\Controllers\CategoryController::class,
-            [
-                'names' => [
-                    'edit' => 'blogcategories.edit',
-                    'index' => 'blogcategories.index',
-                    'create' => 'blogcategories.create',
-                    'store' => 'blogcategories.store',
-                    'destroy' => 'blogcategories.destroy',
-                    'update' => 'blogcategories.update'
-                ],
-            ]
-        );
+        // /* Blog Categories */
+        // Route::resource(
+        //     'blogcategories',
+        //     \App\Modules\Blog\Backend\Controllers\CategoryController::class,
+        //     [
+        //         'names' => [
+        //             'edit' => 'blogcategories.edit',
+        //             'index' => 'blogcategories.index',
+        //             'create' => 'blogcategories.create',
+        //             'store' => 'blogcategories.store',
+        //             'destroy' => 'blogcategories.destroy',
+        //             'update' => 'blogcategories.update'
+        //         ],
+        //     ]
+        // );
 
         /* News */
         Route::resource(

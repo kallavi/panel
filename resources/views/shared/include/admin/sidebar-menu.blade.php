@@ -56,9 +56,9 @@
             :title="'Bloglar'" :data-kt-menu-trigger="'click'" :segment1Acc="'backoffice'"  :segment2Acc="'blogs'" >
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
-                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'blogs.index'" :title="'Bloglar'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="''"></x-admin.menu-item>
-                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'blogs.create'" :title="'Yeni Blog'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="'create'"></x-admin.menu-item>
-                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'blogcategories.index'" :title="'Blog Kategorileri'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="'categories'"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.blogs.index'" :title="'Bloglar'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="''"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.blogs.create'" :title="'Yeni Blog'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="'create'"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.blogcategories.index'" :title="'Blog Kategorileri'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="'categories'"></x-admin.menu-item>
             </x-slot:subMenu>
         </x-admin.menu-item>
         {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
