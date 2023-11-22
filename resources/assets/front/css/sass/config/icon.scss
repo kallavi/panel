@@ -1,0 +1,87 @@
+
+.customIcon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconFont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-apps:before {
+  content: "\e900";
+  color: #06337a;
+}
+.icon-big-left-arrow:before {
+  content: "\e901";
+  color: #0b6dc7;
+}
+.icon-big-right-arrow:before {
+  content: "\e902";
+  color: #0b6dc7;
+}
+ 
+.icon-call:before {
+  content: "\e903";
+  color: #dee2e6;
+}
+.icon-chevron-left:before {
+  content: "\e904";
+  color: #adb5bd;
+}
+.icon-chevron-right:before {
+  content: "\e905";
+  color: #adb5bd;
+}
+.icon-facebook:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-instagram:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-location:before {
+  content: "\e90a";
+  color: #dee2e6;
+}
+.icon-mail:before {
+  content: "\e90b";
+  color: #dee2e6;
+}
+.icon-play:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-printer:before {
+  content: "\e90d";
+  color: #dee2e6;
+}
+.icon-twitter:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-upload:before {
+  content: "\e910";
+  color: #adb5bd;
+}
+.icon-whatsapp:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-close1:before {
+  content: "\e914";
+}
+.icon-left-arrow:before {
+  content: "\e912";
+}
+.icon-right-arrow:before {
+  content: "\e913";
+  color: #fff;
+}

@@ -1,0 +1,159 @@
+// .modal-backdrop {
+//     --bs-modal-bg: #E1081E;
+//     --bs-backdrop-bg: #E1081E;
+// }
+
+.modal {
+    --bs-modal-bg: #06337ab5;
+    --bs-backdrop-bg: #06337ab5;
+
+    .modal-content {
+        .modal-body {
+            
+            .videoCover {
+                aspect-ratio: 8/4.5;
+
+                .videoWrapper {
+                    height: 100%;
+                    width: 100%;
+                    @media screen and (max-width:991.98px) {
+                        border-radius: 0;
+                    }
+
+                    iframe {
+                        border-radius: 20px;
+                        @media screen and (max-width:991.98px) {
+                            border-radius: 0;
+                        }
+                    }
+
+                    video {
+                        border-radius: 20px;
+                        @media screen and (max-width:991.98px) {
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-close {
+        background: #DC3545;
+        opacity: 1;
+        border-radius: 50%;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        position: absolute;
+        top: 0;
+        right: -40px;
+
+        @media screen and (max-width:991.98px) {
+            top: -100px;
+            right: 25px;
+        }
+    }
+
+    &#hizmetModal {
+      
+        .btn-close {
+            top: 50px;
+            right: 60px;
+            @media screen and (max-width:991.98px) {
+                top: 50px;
+                right: 9vw; 
+            }
+        }
+        .modal-body {
+            padding: 7vw;
+
+            @media screen and (max-width:991.98px) {
+                flex-direction: column-reverse;
+                padding: 7vw 0;
+            }
+
+            .paragraph {
+                height: 28vw;
+                overflow-y: auto;
+                @media screen and (min-width: 1921px) {
+                    height: auto;
+                }
+                @media screen and (max-width:991.98px) {
+                    height: 40vw;
+                }
+                @media screen and (max-width:600px) {
+                    height: 50vw;
+                }
+            }
+
+            
+            &::after {
+                content: "";
+                background-image: url('../images/wave-bg.svg');
+                position: absolute;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left;
+                left: 0;
+                bottom: 100px;
+                width: 17.5vw; 
+                z-index: 1;
+                height: 50px;
+                @media screen and (min-width:1921px) { 
+                    bottom: 100px;
+                }
+        
+                @media screen and (max-width:1600px) {
+                    bottom: 150px;
+                }
+        
+                @media screen and (max-width: 991.98px) {
+                    left: auto;
+                    top: 51%;
+                    width: 31vw;
+                    right: 0;
+                } 
+                @media screen and (max-width: 600px) { 
+                    top: auto;
+                    bottom: 45%;
+                    width: 43vw; 
+                } 
+                @media screen and (max-width: 480px) {
+                    top: auto;
+                    bottom: 48%;
+                } 
+            }
+        }
+
+        .desc {
+            z-index: 2;
+           h1{
+            @media screen and (max-width: 991.98px) {
+                text-align: center;
+                font-size: 28px;
+            } 
+         
+           }
+           p,
+           h6,
+           span,
+           li{
+            color: #ffff;
+           } 
+        }
+    }
+}
+
+// .modal .modal-content {
+//     opacity: 0;
+//     transform: scale(0.7);
+//     transition: all 0.3s;
+// }
+// .modal.show .modal-content {
+//     opacity: 1;
+//     transition: all 0.3s;
+//     transform: scale(1);
+// }

@@ -1,0 +1,39 @@
+$green: #46BE7D;
+$blue:#2884EF;
+$red:#D9214E;
+$indigo:#1D2139;
+$indigo2:#181C32;
+$gray:#3F4254;
+$gray-light:#A1A5B7;
+
+// $gray-300:#F5F8FA;
+
+$colors:(
+    green:$green,
+    blue:$blue,
+    red:$red,
+    indigo:$indigo,
+    gray:$gray,
+    gray-light:$gray-light,
+    // gray-300:$gray-300
+);
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+        & > .timeline-label {
+            .timeline-badge{
+                background-color: $color;
+                border: 6px solid $color!important;
+            }
+        }
+    }
+    .btn-#{$name} {
+        color: var(--bs-primary-inverse);
+        border-color:$color;
+        background-color:$color;
+    }
+    .text-#{$name} {
+        color: $color;
+    }
+}

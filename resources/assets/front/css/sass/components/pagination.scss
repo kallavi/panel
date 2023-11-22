@@ -1,0 +1,39 @@
+.pagination { 
+    .page-link {
+        color: var(--gray-600, #6C757D);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        transition: all 0.3s linear;
+        padding: 12px 16px;
+
+        &:focus {
+            box-shadow: none;
+            background-color: transparent;
+        }
+
+        &.active {
+            background: var(--primary-color, #0B6DC7);
+            color: #fff; 
+            border-color: #0B6DC7;
+        }
+        .customIcon {
+            &::before {
+                color: #ADB5BD;
+            }
+        }
+        &:hover {
+            @media screen and (min-width:992px) {
+                background: var(--primary-color, #0B6DC7);
+                color: #fff;
+
+                .customIcon {
+                    &::before {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+$enable-negative-margins: true;
+
+$primary-dark:#06337A; 
+$light:#ffffff;
+
+$colors:(
+    primary-dark:$primary-dark,
+    light:$light
+); 
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+    .btn-#{$name} {
+        color:#ffffff!important;
+        border-color:$color;
+        background-color:$color;
+        @media screen and (max-width:991.98px) {
+            &:hover{
+                color:#ffffff!important;
+                border-color:$color;
+                background-color:$color!important;
+            }
+        }
+        @media screen and (min-width:992px) {
+            &:hover{
+                color:$color!important;
+                border-color:$color;
+                background-color:#ffffff!important;
+                i,a,span{
+                    color: $color;
+                    &:before{
+                        color: $color;
+                    }
+                }
+            }
+            &.noHover{
+                &:hover{
+                    color:#ffffff!important;
+                    border-color:$color;
+                    background-color:$color!important;
+                    i,a,span{
+                        color:#ffffff!important;
+                        &:before{
+                            color:#ffffff!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-white{
+        color:$color!important;
+    }
+    .btn-light{
+        color:$primary-dark!important;
+        background-color: $color;
+        border:1px solid $color;
+        @media screen and (max-width:991.98px) {
+            &:hover{
+                color:$primary-dark !important;
+                background-color: $color;
+                border:1px solid $color;
+            }
+        }
+        @media screen and (min-width:992px) {
+            &:hover,
+            &.show{
+                color:#ffffff!important;
+                background-color:$primary-dark!important;
+                border: 1px solid #ffffff!important;
+
+                a,i,&:after,&:before,*{
+                    color:#ffffff!important;
+                }
+            }
+        }
+    }
+    .text-#{$name} {
+        color: $color;
+    }
+}

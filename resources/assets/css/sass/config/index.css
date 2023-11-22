@@ -1,0 +1,150 @@
+.bg-green {
+  background-color: #46BE7D;
+}
+.bg-green > .timeline-label .timeline-badge {
+  background-color: #46BE7D;
+  border: 6px solid #46BE7D !important;
+}
+
+.btn-green {
+  color: var(--bs-primary-inverse);
+  border-color: #46BE7D;
+  background-color: #46BE7D;
+}
+
+.text-green {
+  color: #46BE7D;
+}
+
+.bg-blue {
+  background-color: #2884EF;
+}
+.bg-blue > .timeline-label .timeline-badge {
+  background-color: #2884EF;
+  border: 6px solid #2884EF !important;
+}
+
+.btn-blue {
+  color: var(--bs-primary-inverse);
+  border-color: #2884EF;
+  background-color: #2884EF;
+}
+
+.text-blue {
+  color: #2884EF;
+}
+
+.bg-red {
+  background-color: #D9214E;
+}
+.bg-red > .timeline-label .timeline-badge {
+  background-color: #D9214E;
+  border: 6px solid #D9214E !important;
+}
+
+.btn-red {
+  color: var(--bs-primary-inverse);
+  border-color: #D9214E;
+  background-color: #D9214E;
+}
+
+.text-red {
+  color: #D9214E;
+}
+
+.bg-indigo {
+  background-color: #1D2139;
+}
+.bg-indigo > .timeline-label .timeline-badge {
+  background-color: #1D2139;
+  border: 6px solid #1D2139 !important;
+}
+
+.btn-indigo {
+  color: var(--bs-primary-inverse);
+  border-color: #1D2139;
+  background-color: #1D2139;
+}
+
+.text-indigo {
+  color: #1D2139;
+}
+
+.bg-gray {
+  background-color: #3F4254;
+}
+.bg-gray > .timeline-label .timeline-badge {
+  background-color: #3F4254;
+  border: 6px solid #3F4254 !important;
+}
+
+.btn-gray {
+  color: var(--bs-primary-inverse);
+  border-color: #3F4254;
+  background-color: #3F4254;
+}
+
+.text-gray {
+  color: #3F4254;
+}
+
+.bg-gray-light {
+  background-color: #A1A5B7;
+}
+.bg-gray-light > .timeline-label .timeline-badge {
+  background-color: #A1A5B7;
+  border: 6px solid #A1A5B7 !important;
+}
+
+.btn-gray-light {
+  color: var(--bs-primary-inverse);
+  border-color: #A1A5B7;
+  background-color: #A1A5B7;
+}
+
+.text-gray-light {
+  color: #A1A5B7;
+}
+
+@font-face {
+  font-family: "google_sansbold";
+  src: url("../assets/fonts/googleSans/googlesans-bold-webfont.eot");
+  src: url("../assets/fonts/googleSans/googlesans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/googleSans/googlesans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/googleSans/googlesans-bold-webfont.woff") format("woff"), url("../assets/fonts/googleSans/googlesans-bold-webfont.ttf") format("truetype"), url("../assets/fonts/googleSans/googlesans-bold-webfont.svg#google_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "google_sansbold_italic";
+  src: url("../assets/fonts/googleSans/googlesans-bolditalic-webfont.eot");
+  src: url("../assets/fonts/googleSans/googlesans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/googleSans/googlesans-bolditalic-webfont.woff2") format("woff2"), url("../assets/fonts/googleSans/googlesans-bolditalic-webfont.woff") format("woff"), url("../assets/fonts/googleSans/googlesans-bolditalic-webfont.ttf") format("truetype"), url("../assets/fonts/googleSans/googlesans-bolditalic-webfont.svg#google_sansbold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "google_sansitalic";
+  src: url("../assets/fonts/googleSans/googlesans-italic-webfont.eot");
+  src: url("../assets/fonts/googleSans/googlesans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/googleSans/googlesans-italic-webfont.woff2") format("woff2"), url("../assets/fonts/googleSans/googlesans-italic-webfont.woff") format("woff"), url("../assets/fonts/googleSans/googlesans-italic-webfont.ttf") format("truetype"), url("../assets/fonts/googleSans/googlesans-italic-webfont.svg#google_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "google_sansmedium";
+  src: url("../assets/fonts/googleSans/googlesans-medium-webfont.eot");
+  src: url("../assets/fonts/googleSans/googlesans-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/googleSans/googlesans-medium-webfont.woff2") format("woff2"), url("../assets/fonts/googleSans/googlesans-medium-webfont.woff") format("woff"), url("../assets/fonts/googleSans/googlesans-medium-webfont.ttf") format("truetype"), url("../assets/fonts/googleSans/googlesans-medium-webfont.svg#google_sansmedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "google_sansmedium_italic";
+  src: url("../assets/fonts/googleSans/googlesans-mediumitalic-webfont.eot");
+  src: url("../assets/fonts/googleSans/googlesans-mediumitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/googleSans/googlesans-mediumitalic-webfont.woff2") format("woff2"), url("../assets/fonts/googleSans/googlesans-mediumitalic-webfont.woff") format("woff"), url("../assets/fonts/googleSans/googlesans-mediumitalic-webfont.ttf") format("truetype"), url("../assets/fonts/googleSans/googlesans-mediumitalic-webfont.svg#google_sansmedium_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "google_sansregular";
+  src: url("../assets/fonts/googleSans/googlesans-regular-webfont.eot");
+  src: url("../assets/fonts/googleSans/googlesans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/googleSans/googlesans-regular-webfont.woff2") format("woff2"), url("../assets/fonts/googleSans/googlesans-regular-webfont.woff") format("woff"), url("../assets/fonts/googleSans/googlesans-regular-webfont.ttf") format("truetype"), url("../assets/fonts/googleSans/googlesans-regular-webfont.svg#google_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}/*# sourceMappingURL=index.css.map */

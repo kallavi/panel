@@ -1,0 +1,319 @@
+.formContent {
+
+    &.blueForm {
+
+        height: 580px;
+        border-radius: 40px;
+        background: var(--primary-color, #0B6DC7);
+        position: relative;
+        padding: 6rem 11% 0 11%;
+        z-index: 1;
+
+        @media screen and (max-width:1600px) {
+            padding: 6rem 6% 0 6%;
+        }
+
+        @media screen and (max-width:991.98px) {
+            padding-top: 3rem;
+            padding-bottom: 2.5rem;
+            height: auto;
+            margin-top: 2rem;
+
+            form {
+                width: 100%;
+                padding-top: 2.5rem;
+
+                &>div {
+                    width: 100%;
+                }
+            }
+        }
+       
+        @media screen and (max-width:480px) {
+            width: 93vw;
+            margin-left: -1.5rem;
+            border-radius: 16px;
+        }
+
+        .form-caption {
+            @media screen and (max-width:1200px) {
+                width: 47%;
+            }
+
+            @media screen and (max-width:991.98px) {
+                width: 70%;
+                text-align: center;
+            }
+        }
+
+        form {
+
+            .fileInputWrapper{
+                .invalid-tooltip{
+                    &.error2{
+                        display: none;
+                    }
+                }
+                &.error{
+                    label{
+                        color: #c70b0b;
+                    }
+                    .invalid-tooltip{
+                        &.error2{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .form-select,
+            .form-control {
+                display: flex;
+                width: 26.354166vw;
+                height: 50px;
+                padding: 9px 30px;
+                align-items: center;
+                gap: 8px;
+                border-radius: 30px;
+                border: 1px solid var(--gray-300, #DEE2E6);
+                background: var(--default-white, #FFF);
+                color: var(--gray-500, #ADB5BD);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                background-image: none !important;
+                @media screen and (max-width:1366px) {
+                    width: 27.354166vw;
+                }
+
+                @media screen and (max-width:991.98px) {
+                    width: 100%;
+                    font-size: 14px;
+                    height: 40px;
+                }
+
+                @media screen and (max-width:600px) {
+                    height: 40px;
+                } 
+
+                &::placeholder {
+                    color: var(--gray-500, #ADB5BD);
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+
+                    @media screen and (max-width:380px) {
+                        font-size: 14px;
+                    }
+                }
+
+                &::-webkit-file-upload-button {
+                    display: none;
+                }
+
+            }
+
+            .icon-chevron-left {
+                position: absolute;
+                right: 7%;
+                transform: rotate(-90deg);
+                top: 35%;
+                @media screen and (max-width:600px) {
+                    right: 9%;
+                }
+                @media screen and (max-width:500px) {
+                    right: 11%;
+                }
+            }
+
+            .icon-upload {
+                position: absolute;
+                right: 7%;
+                top: 24%;
+                @media screen and (max-width:991.98px) {
+                    top: 19%;
+                }
+                @media screen and (max-width:600px) {
+                    right: 9%;
+                }
+                @media screen and (max-width:500px) {
+                    right: 11%;
+                }
+            }
+
+            span {
+                color: var(--default-white, #FFF);
+                font-size: 12px;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+  
+}
+
+.formWrapper {
+    padding: 30px;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+
+.contact-page {
+    form {
+
+        option,
+        .form-select,
+        .form-control {
+          
+            background: var(--default-white, #FFF);
+            color: var(--gray-500, #ADB5BD);
+            border-radius: 25px;
+            height: 50px;
+            border: none;
+            box-shadow: none !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            padding: 0 1rem;
+            background-position: right 1rem center;
+
+            &:hover,
+            &:focus {
+                box-shadow: none;
+            }
+
+            &::-ms-input-placeholder {
+                color: var(--gray-500, #ADB5BD);
+                opacity: 1;
+            }
+
+            &::-webkit-input-placeholder {
+                color: var(--gray-500, #ADB5BD);
+                opacity: 1;
+            }
+
+            &::placeholder {
+                color: var(--gray-500, #ADB5BD);
+                opacity: 1;
+                /* Firefox */
+            }
+
+            @media screen and (max-width:991.98px) {
+                font-size: 14px;
+                height: 40px;
+            }
+        }
+
+        textarea {
+            height: auto !important;
+            &.form-control{
+                min-height: calc(1.5em + 15.15rem + 13px);
+            }
+        }
+
+        .input-group-text {
+            border-radius: 25px 0px 0px 25px;
+            background: var(--default-white, #FFF);
+            color: var(--gray-500, #ADB5BD);
+            border: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .formSubmitBtn {
+            margin-bottom: -50px;
+            margin-top: 0px;
+            margin-bottom: -50px;
+            margin-left: 28px !important;
+            top: 20px;
+            position: relative;
+
+            @media screen and (max-width:991.98px) {
+                margin-top: 10px;
+            }
+        }
+
+
+        &.type2 {
+            position: relative;
+            justify-content: end;
+            z-index: 5;
+            .btn {
+                width: auto; 
+                position: relative;
+                top: -47px;
+                @media screen and (max-width:991.98px) {
+                    height: 40px;
+                    bottom: 25px;
+                    display: flex;
+                    font-size: 14px;
+                    align-items: center;
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                } 
+            }
+
+            &:before {
+                content: '';
+                border-radius: 0px 0px 0px 20px;
+                background: var(--gray-200, #E9ECEF);
+                position: absolute;
+                width: 150%;
+                height: 114%;
+                top: 0;
+                left: -11vw;
+
+                @media screen and (min-width:992px) {
+                    content: none;
+                } 
+                @media screen and (max-width:991.98px) {
+                    height: calc(100% + 1.5rem);
+                    width: 100%;
+                    left: 0;
+                    border-radius: 0 0 20px 20px;
+                    right: 0; 
+                   
+                }
+            }
+        }
+
+        .invalid-tooltip {
+            opacity: 0.8;
+        }
+
+        .textArea {
+            .invalid-tooltip {
+                top: 110%;
+
+                @media screen and (max-width:991.98px) {
+                    top: 107%;
+                }
+            }
+        }
+    }
+}
+
+
+input::-ms-input-placeholder {
+    color: var(--gray-500, #ADB5BD);
+    opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+    color: var(--gray-500, #ADB5BD);
+    opacity: 1;
+}
+
+input::placeholder {
+    color: var(--gray-500, #ADB5BD);
+    opacity: 1;
+    /* Firefox */
+}
+select{
+    -webkit-appearance: none; 
+    appearance: none 
+}
+.form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"], .was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"]{
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,29 @@
+@import "header";
+@import "swiper"; 
+@import "subBanner";
+@import "breadcrumb";
+@import "leftMenu"; 
+@import "footer";
+@import "form";
+@import "card";
+@import "pagination";
+@import "modal";
+@import "slick-custom";
+
+.centerContent{
+    position: relative;
+    padding-bottom: 0;
+    border-radius: 0 0 65px 65px; 
+    z-index: 2;
+    // .contentPages{
+    //     padding-bottom: 4.3rem;
+    //     @media screen and (max-width:991.98px) {
+    //         padding-bottom: 18px;
+    //     }
+    // }
+    @media screen and (max-width:991.98px) {
+        border-radius: 0 0 20px 20px; 
+    }
+
+    @import "leftMenu";
+}

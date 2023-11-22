@@ -1,0 +1,24 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+//Route::group(['prefix' => '{{modulePrefix}}'], function () {
+//    // Define module-specific routes here
+//    Route::get('/',[{{moduleName}}Controller::class,'index'])->name('{{modulePrefix}}.index');
+//});
+
+
+Route::resource(
+    env('ADMIN_PREFIX') . '/' . '{{moduleNameLower}}',
+    App\Modules\{{moduleName}}\Backend\Controllers\{{moduleName}}Controller::class,
+    [
+        'names' => [
+            'edit' => 'admin.{{moduleNameLower}}.edit',
+            'index' => 'admin.{{moduleNameLower}}.index',
+            'create' => 'admin.{{moduleNameLower}}.create',
+            'store' => 'admin.{{moduleNameLower}}.store',
+            'destroy' => 'admin.{{moduleNameLower}}.destroy',
+            'update' => 'admin.{{moduleNameLower}}.update',
+        ]
+    ]
+);

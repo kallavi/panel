@@ -1,0 +1,78 @@
+html {
+  font-size: 12.5px;
+}
+
+html, body {
+  font-family: "Outfit", sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.image-input {
+  background-image: url("../assets/media/svg/avatars/blank.svg");
+}
+
+[data-bs-theme=dark] .image-input-placeholder {
+  background-image: url("../assets/media/svg/avatars/blank-dark.svg");
+}
+
+.image-input-placeholder {
+  background-image: url("../assets/media/svg/files/blank-image.svg");
+}
+
+[data-bs-theme=dark] .image-input-placeholder {
+  background-image: url("../assets/media/svg/files/blank-image-dark.svg");
+}
+
+.applyCheck .form-check-input:checked[type=checkbox] {
+  --bs-form-check-bg-image: url("../images/checkbox-tick.svg");
+  background-size: 1.75rem;
+}
+
+.applyCheck .form-check-input:checked {
+  background-color: #ffffff;
+  border-color: #E1E3EA;
+}
+
+.bg-gray-300 {
+  --bs-border-color: #E1E3EA;
+  --bs-accordion-active-color: #212529;
+}
+
+.bg-gray-300 input,
+.bg-gray-300 textarea {
+  border-color: #E1E3EA;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #7E8299;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7E8299;
+}
+
+/*Card Css*/
+.card .card-header:not(.active) {
+  border: none !important;
+}
+
+.inputfile-box {
+  border-radius: 0.625rem;
+  border: 1px dashed var(--gray-gray-300, #E1E3EA);
+}
+
+.inputFileLabel {
+  padding: 20px;
+  width: 100%;
+}
+
+.inputFileLabel:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=custom.css.map */
+

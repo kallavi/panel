@@ -1,0 +1,46 @@
+.leftMenuColumn {
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    min-width: 300px;
+
+    &:before {
+        content: "";
+        width: 200%;
+        min-height: 353px;
+        height: 100%;
+        position: absolute;
+        border-radius: 0px 0px 20px 0px;
+        // background: linear-gradient(316deg, #f8f9fa 0.79%, rgba(248, 249, 250, 0) 66.75%);
+        background: var(--gray-100, #F8F9FA);
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .leftMenu {
+        padding-top: 24px;
+
+        .menu-item {
+            color: #343A40;
+            font-family: Outfit;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            display: block;
+            margin: 40.3px 0;
+            transition: all 0.3s linear;
+
+            &.active {
+                color: #0B6DC7;
+            }
+
+            @media screen and (min-width:991.98px) {
+                &:hover {
+                    color: #0B6DC7;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+
+.app-sidebar-navs{
+    .meu{
+       .menu-item{
+        .menu-link{
+            .menun-icon{
+                color:#5E6278;
+                .svg-icon,
+                i{
+                    color:#5E6278;
+                }
+            }
+        }
+       } 
+    }
+}
+
+.app-sidebar-navs .menu .menu-item.hover:not(.here)>.menu-link:not(.disabled):not(.active):not(.here) .menu-title, 
+.app-sidebar-navs .menu .menu-item:not(.here) .menu-link:hover:not(.disabled):not(.active):not(.here) .menu-title,
+.app-sidebar-navs .menu .menu-item.hover:not(.here)>.menu-link:not(.disabled):not(.active):not(.here) .menu-icon, 
+.app-sidebar-navs .menu .menu-item:not(.here) .menu-link:hover:not(.disabled):not(.active):not(.here) .menu-icon,
+.app-sidebar-navs .menu .menu-item.hover:not(.here)>.menu-link:not(.disabled):not(.active):not(.here) .menu-arrow, 
+.app-sidebar-navs .menu .menu-item:not(.here) .menu-link:hover:not(.disabled):not(.active):not(.here) .menu-arrow{
+    color:#FDC88E
+}
+.app-sidebar-navs .menu .menu-item .menu-link.active {
+    background-color: rgba(0,0,0,0);
+    color: #FDC88E;
+}
+.app-sidebar-navs .menu .menu-item .menu-link.active .menu-title ,
+.app-sidebar-navs .menu .menu-item .menu-link.active .menu-icon {
+    color: #FDC88E;
+}
+.exitButton{
+    @media screen and (min-width:991px) {
+        transition: all .3s linear;
+        &:hover{
+            background-color: #ffffff;
+            border-color: #ffffff;
+            color:#1D2139;
+            .ki-outline{
+                color:#1D2139;
+            }
+        }
+    }
+}
