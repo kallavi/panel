@@ -41,24 +41,58 @@
 <script src="{{ asset('assets/js/custom/utilities/modals/create-app.js') }}"></script>
 <script src="{{ asset('assets/js/custom/utilities/modals/users-search.js') }}"></script>
 <script src="{{ asset('assets/plugins/custom/ckeditor/ckeditor-classic.bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
 
 @yield('script')
 
 <script type="text/javascript">
-    // let table = new DataTable('#documentTable', {
-    //     searching: false,
-    //     ordering: false,
-    //     select: false,
-    //     lengthChange: false,
-    // });
+        $('.phoneMask').mask('(000) 000 00 00');
+        $('.tcNo').mask('00000000000');
+        $('.birthDay').mask('0000');
+        $('.textMask').mask('A', {
+            translation: {
+                'A': {
+                    pattern: /[A-Za-zÇçĞğİıÖöŞşÜü ]/,
+                    recursive: true
+                }
+            }
+        });
+        $('.emailInput').on('input', function() {
+            var emailValue = $(this).val();
+            var isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(emailValue);
 
-    // let table2 = new DataTable('#pageTable', {
-    //     searching: false,
-    //     ordering: false,
-    //     select: false,
-    //     lengthChange: false,
-    // });
+            if (!isValid) {
+                $(this).addClass('error'); // Hatalı girişleri belirginleştirmek için bir class ekleyebilirsiniz
+            } else {
+                $(this).removeClass('error');
+            }
+        });
+        $('.allNumber').mask('0', {
+            translation: {
+                '0': {
+                    pattern: /[0-9]/,
+                    recursive: true
+                }
+            }
+        });
+        //status change
+        $(".durumSecim").change(function() {
+            var selectedOptionValue = $(this).val();
+            console.log("Seçili Option: " + $(".durumSecim").val());
+            if(selectedOptionValue == 1){
+                $(".statusChange").removeClass("bg-danger");
+                $(".statusChange").addClass("bg-primary")
+            }
+            else{
+                $(".statusChange").addClass("bg-danger");
+                $(".statusChange").removeClass("bg-primary")
+            }
+        });
 
+        //sayfa ıcerısınde ilk tabların active gelmesı ıcın
+        $(function(){
+            $(".nav-tabs .nav-item:first-child .nav-link").addClass("active");
+        })
     document.addEventListener("DOMContentLoaded", function() {
         // İlk "nav-tabs" elementini seçin
         const navTabs = document.querySelector(".nav-tabs");

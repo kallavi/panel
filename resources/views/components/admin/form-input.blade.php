@@ -57,20 +57,35 @@
         @if (isset($checked)) checked="{{ $checked }}" @endif
         @if (isset($placeholder)) placeholder="{{ $placeholder }}" @endif
         {{isset($isDisabled) && $isDisabled ? "disabled" : ''}}
+        @if(isset($required)) required @endif
         @if (isset($class))
-            @if (isset($error))
+            class="{{$class}} @if (isset($error)) border-danger text-danger @else @if(isset($iconTag)) ps-12 @endif @endif
+            @if(isset($maskTel)) phoneMask
+            @elseif(isset($maskTc)) tcNo
+            @elseif(isset($maskBirthDay)) birthDay
+            @elseif(isset($maskText)) textMask
+            @elseif(isset($maskEmail)) emailInput
+            @elseif(isset($maskNumber)) allNumber"
+            @endif
+            {{-- @if (isset($error))
                 class="{{ $class . ' border-danger text-danger' }}"
             @else
                 class="{{ $class ?? '' }} @if(isset($iconTag)) ps-12 @endif "
-            @endif
+            @endif --}}
+           
         @else
-            @if (isset($error))
-                class={{"border-danger text-danger"}}
-            @else
-                @isset($iconTag)
-                    class="ps-12 {{ $class??''}}"
-                @endisset
-            @endif
+            class="@if (isset($error)) border-danger text-danger @endif
+                @if(isset($maskTel)) phoneMask
+                @elseif(isset($maskTc)) tcNo
+                @elseif(isset($maskBirthDay)) birthDay
+                @elseif(isset($maskText)) textMask
+                @elseif(isset($maskEmail)) emailInput
+                @elseif(isset($maskNumber)) allNumber
+            @endif"
+            
+            @isset($iconTag)
+                class="ps-12 {{ $class??''}}"
+            @endisset
         @endif
         {{ $attributes }}
         @if (isset($required)) required @endif
