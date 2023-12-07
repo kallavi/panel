@@ -94,6 +94,14 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'sliders.create'" :title="'Yeni Ekle'" :segment1="'backoffice'" :segment2="'sliders'" :segment3="'create'"></x-admin.menu-item>
             </x-slot:subMenu>
         </x-admin.menu-item>
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-slider-horizontal-2 fs-2'" :class="'menu-accordion'"
+            :title="'Fotoğraf Galerileri'" :data-kt-menu-trigger="'click'" :segment1Acc="'backoffice'" :segment2Acc="'photo'">
+            <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
+            <x-slot:subMenu>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.photo.index'" :title="'Galeri Liste'" :segment1="'backoffice'"  :segment2="'photo'" :segment3="''"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.photo.create'" :title="'Yeni Ekle'" :segment1="'backoffice'" :segment2="'photo'" :segment3="'create'"></x-admin.menu-item>
+            </x-slot:subMenu>
+        </x-admin.menu-item>
         {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-picture fs-2'" :class="'menu-accordion'"
             :title="'Fotoğraf Galerileri'" :data-kt-menu-trigger="'click'" :segment1Acc="'photo-gallery'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
@@ -128,7 +136,7 @@
             :title="'Kullanıcılar'" :data-kt-menu-trigger="'click'" :segment1Acc="'forms'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
-                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.users.index'" :title="'Kullanıcı Listesi'" :segment1="'create'"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.users.index'" :title="'Kullanıcı Listesi'" :segment1="'create'"></x-admin.menu-item>
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.users.create'" :title="'Kullanıcı Ekle'" :segment1="'create'"></x-admin.menu-item>
             </x-slot:subMenu>
         </x-admin.menu-item>
