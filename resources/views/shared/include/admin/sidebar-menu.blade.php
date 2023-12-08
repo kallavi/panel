@@ -95,6 +95,14 @@
             </x-slot:subMenu>
         </x-admin.menu-item>
         <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-slider-horizontal-2 fs-2'" :class="'menu-accordion'"
+            :title="'Partner'" :data-kt-menu-trigger="'click'" :segment1Acc="'backoffice'" :segment2Acc="'partners'">
+            <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
+            <x-slot:subMenu>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.partner.index'" :title="'Partner Liste'" :segment1="'backoffice'"  :segment2="'partners'" :segment3="''"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.partner.create'" :title="'Yeni Ekle'" :segment1="'backoffice'" :segment2="'partners'" :segment3="'create'"></x-admin.menu-item>
+            </x-slot:subMenu>
+        </x-admin.menu-item>
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-slider-horizontal-2 fs-2'" :class="'menu-accordion'"
             :title="'Fotoğraf Galerileri'" :data-kt-menu-trigger="'click'" :segment1Acc="'backoffice'" :segment2Acc="'photo'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
