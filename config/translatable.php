@@ -14,7 +14,6 @@ return [
         'tr',
         'en',
         'ar'
-         
     ],
 
     /*
@@ -54,7 +53,7 @@ return [
     | $useTranslationFallback when defined
     |
     */
-    'use_fallback' => true,
+    'use_fallback' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +65,7 @@ return [
     | locale. Note that 'use_fallback' must be enabled.
     |
      */
-    'use_property_fallback' => true,
+    'use_property_fallback' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +81,7 @@ return [
     | is used first. So "es" will be checked before "es_MX".
     |
     */
-    'fallback_locale' => 'tr',
+    'fallback_locale' => null,
 
     /*
     |--------------------------------------------------------------------------
