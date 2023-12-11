@@ -8,13 +8,13 @@ use App\Modules\Blog\Backend\Models\BlogCategory;
 use App\Modules\Blog\Backend\Models\BlogGallery;
 use Illuminate\Http\Request;
 use Throwable;
- 
+
 class BlogController extends Controller
 {
 
     public function index()
     {
-     
+
         $blogs = Blog::with('categoryR')->get();
         return view('Blog-Backend::index', compact('blogs'));
     }

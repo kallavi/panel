@@ -62,6 +62,17 @@ class PageController extends Controller
                 ]);
             }
         }
+        if ($request->hasFile('documents')) {
+            foreach ($request->documents as $document) {
+                $file_name = uniqid() . '.' . $document->getClientOriginalExtension();
+                $size = $document->getSize();
+                $document->move(public_path('uploads/page'), $file_name);
+                $page->documents()->create([
+                    'slug' => 'uploads/page/' . $file_name,
+                    'size' => $size
+                ]);
+            }
+        }
         return redirect()->route('pages.edit', $page->id);
     }
 

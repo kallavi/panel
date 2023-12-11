@@ -132,7 +132,7 @@
                                                         </div>
                                                     </x-slot:cardHeader>
                                                     <x-slot:cardBody>
-                                                        <x-admin.form-dropzone :class="'fv-row mb-2 mt-5'" :id="'kt_ecommerce_add_product_media'" />
+                                                        <x-admin.form-dropzone :class="'fv-row mb-2 mt-5'" :name="'documents[]'" :id="'kt_ecommerce_add_product_media'" />
                                                     </x-slot:cardBody>
                                                 </x-admin.card>
                                             </div>
