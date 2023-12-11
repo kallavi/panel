@@ -13,13 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('blogs', function (Blueprint $table) {
+        Schema::create('port_category_translations', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
-            $table->string('status')->nullable();
-            $table->string('featured')->nullable();
-            $table->string('category')->nullable();
+            $table->foreignId('port_category_id')->constrained()->onDelete('cascade');
+            $table->string('locale')->index();
+            $table->string('name')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
+
+            $table->unique(['port_category_id', 'locale']);
         });
     }
 
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blogs');
+        Schema::dropIfExists('port_category_translations');
     }
 };

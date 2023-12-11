@@ -61,15 +61,16 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.blogcategories.index'" :title="'Blog Kategorileri'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="'categories'"></x-admin.menu-item>
             </x-slot:subMenu>
         </x-admin.menu-item>
-        {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
-            :title="'Portfolyolar'" :data-kt-menu-trigger="'click'" :segment1Acc="'portfolios'">
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
+            :title="'Portfolyolar'" :data-kt-menu-trigger="'click'" :segment1Acc="'portfolio'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
-                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'portfolios'" :title="'Portfolyolar'" :segment1="'portfolios'" :segment2="''"></x-admin.menu-item>
-                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'portfolios/create'" :title="'Yeni Ekle'" :segment1="'portfolios'" :segment2="'create'"></x-admin.menu-item>
-                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'portfolios/categories'" :title="'Portfolyo Kategorileri'" :segment1="'portfolios'" :segment2="'categories'"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.portfolio.index'" :title="'Portfolyolar'" :segment1="'portfolio'" :segment2="''"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.portfolio.create'" :title="'Yeni Ekle'" :segment1="'portfolio'" :segment2="'create'"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.portfoliocategory.index'" :title="'Portfolyo Kategorileri'" :segment1="'portfolio'" :segment2="'categories'"></x-admin.menu-item>
             </x-slot:subMenu>
         </x-admin.menu-item>
+        {{--
         <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-notification-status fs-2'" :class="'menu-accordion'"
             :title="'Duyurular'" :data-kt-menu-trigger="'click'" :segment1Acc="'announcements'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
